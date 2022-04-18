@@ -1,7 +1,7 @@
 import React from "react";
-import "./Info_Table.css";
+import "./InfoTable.css";
 
-function Info_Table(props){
+function InfoTable(props){
     return(<table>
         <tbody>
             <tr>
@@ -40,4 +40,4 @@ function Info_Table(props){
     </table>);
 }
 
-export default Info_Table;
+export default InfoTable;

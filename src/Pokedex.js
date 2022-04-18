@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Info_Table from "./Info_Table";
+import InfoTable from "./InfoTable";
 import "./pokedex.css";
 import pokeball from "./assets/pokeball.png";
 
@@ -29,7 +29,7 @@ function Pokedex(){
     }
 
     let getInfo = (event) => {
-        if (event.code == "Enter"){
+        if (event.code === "Enter"){
             fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon)
             .then((response) => response.json())
             .then((data) => {
@@ -53,10 +53,10 @@ function Pokedex(){
         </div>
         <div className="result_wrapper">
             <div className="image_wrapper">
-                <img src={source} className="result_img"/>
+                <img src={source} className="result_img" alt="not found"/>
             </div>
             <div className="info_wrapper">
-                <Info_Table info={info}/>
+                <InfoTable info={info}/>
             </div>
         </div>
     </>);
